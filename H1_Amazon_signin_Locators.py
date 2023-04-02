@@ -36,5 +36,3 @@ driver.find_element(By.XPATH, '//a[contains(@href,"ap_signin_notification_condit
 driver.find_element(By.XPATH,'//a[contains(@href, "ap_signin_notification_privacy_notice")]').click()
 
 
-#
-

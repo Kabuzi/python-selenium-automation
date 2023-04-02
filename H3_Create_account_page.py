@@ -30,7 +30,7 @@ driver.find_element(By.ID, 'ap_email')
 driver.find_element(By.ID, "ap_password").send_keys('Biri+265')
 
 #PASSWORD INFO
-driver.find_element(By.XPATH, "//a[text()='Passwords must be at least 6 characters.']']")
+driver.find_element(By.XPATH, "//a[text()='Passwords must be at least 6 characters.']")
 
 #REENTER PASSWORD
 driver.find_element(By.ID, "ap_password_check").send_keys('Biri+265')
