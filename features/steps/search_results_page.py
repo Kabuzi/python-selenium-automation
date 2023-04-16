@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
+from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
 
@@ -9,8 +10,9 @@ CART=(By.ID, "add-to-cart-button")
 
 @then ('click on first product')
 def click_first_product(context):
+    context.driver.wait.until(EC.element_to_be_clickable(ITEM))
     context.driver.find_element(*ITEM).click()
-    sleep(2)
+    #sleep(2)
 
 
 @then ('add to cart')

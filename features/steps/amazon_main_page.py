@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
+from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
 
@@ -31,8 +32,9 @@ def search_for_item(context, product):
 
 @When ('Click on search')
 def click_on_search(context):
+    context.driver.wait.until(EC.element_to_be_clickable(SEARCH_BTN))
     context.driver.find_element(*SEARCH_BTN).click()
-    sleep(0)
+ #   sleep(0)
 
 
 
